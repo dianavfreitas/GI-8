@@ -1,29 +1,29 @@
-function exerciseOfTheDay() {
-    let currentExercise = '';
-    function setExercise(exerciseName) {
-      currentExercise = exerciseName;
-    }
-    function getExercise() {
-      return currentExercise;
-    }
-    return {
-      setExercise,
-      getExercise
-    };
-  }
- 
-  function printExerciseOfTheDay(exerciseManager) {
-    const exercise = exerciseManager.getExercise(); 
-    console.log(`Today's exercise: ${exercise}`);
-  }
-  
-  const exerciseManager = exerciseOfTheDay();
- 
-  exerciseManager.setExercise('running');
-  printExerciseOfTheDay(exerciseManager); 
-  exerciseManager.setExercise('swimming');
-  printExerciseOfTheDay(exerciseManager); 
-  exerciseManager.setExercise('dancing');
-  printExerciseOfTheDay(exerciseManager); 
-  exerciseManager.setExercise('fencing');
-  printExerciseOfTheDay(exerciseManager); 
+Easy
+function ExerciseOfTheDay (){
+    const today = new Date ();
+
+    const dayOfWeek = today.getDay();
+
+      if(dayOfWeek == 0 ){
+       console.log( "running")
+      }else if(dayOfWeek == 1){
+       console.log( "swimming")
+      }else if(dayOfWeek == 2){
+       console.log("fencing")
+      }else if(dayOfWeek == 3){
+       console.log("weightlifting")
+      }else if(dayOfWeek == 4){
+       console.log( "Karate")
+      }else if(dayOfWeek == 5){
+       console.log( "Soccer")
+      }else if (dayOfWeek == 6){
+       console.log( "dancing")
+      }else{
+        console.log( "rest")
+      }
+}
+
+ExerciseOfTheDay()
+
+
+
